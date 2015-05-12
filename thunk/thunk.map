@@ -1,0 +1,4 @@
+{
+    global: my_av_rdft_exports; my_av_rdft_init; my_av_rdft_calc; my_av_rdft_end;
+    local: *;
+};

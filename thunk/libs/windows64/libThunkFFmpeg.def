@@ -1,0 +1,6 @@
+LIBRARY "libThunkFFmpeg.dll"
+EXPORTS
+my_av_rdft_calc
+my_av_rdft_end
+my_av_rdft_exports
+my_av_rdft_init
