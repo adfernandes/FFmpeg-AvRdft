@@ -42,7 +42,7 @@ If you want to tweak or modify, we assume the following:
       --gcc-langs=c,c++,fortran,lto \
       --clean-build
 ```
-* The [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html), version `10d`.
+* The [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html), version `10e`.
 
 As configured in the top-level `build*` shell scripts, `build.sh` runs each of the `build-*.sh` scripts. They build static libraries for `libavcodec.a` and `libavutil.a` for the following platforms:
 
