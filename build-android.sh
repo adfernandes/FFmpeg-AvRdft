@@ -2,9 +2,9 @@
 
 set -e
 
-ARCHIVE="ffmpeg-2.6.2"
+ARCHIVE="ffmpeg-2.6.3"
 DESTROOT="${HOME}/Development/FFmpeg/destroot"
-ANDKROOT="${HOME}/Development/android-ndk-r10d"
+ANDKROOT="${HOME}/Development/android-ndk-r10e" # r10e integrates 'fix-cortex-a53-835769'
 PREBUILT="linux-x86_64"
 
 # See "${ANDKROOT}/docs/CPU-ARCH-ABIS.html"
@@ -39,8 +39,8 @@ for ABI in armeabi-v7a x86 arm64-v8a x86_64 ; do
                 ARCH="arm64"
                 TCHPREFIX="aarch64-linux-android"
                 TOOLCHAIN="${TCHPREFIX}-4.9" # NOTE: NEON is detected at RUNTIME
-                TARGET_CFLAGS="${TARGET_COMMON_CFLAGS} -fpic -mfix-cortex-a53-835769"
-                TARGET_LDFLAGS="${TARGET_COMMON_LDFLAGS} -Wl,--fix-cortex-a53-835769"
+                TARGET_CFLAGS="${TARGET_COMMON_CFLAGS} -fpic"
+                TARGET_LDFLAGS="${TARGET_COMMON_LDFLAGS}"
                 PLATFORM="android-21"
                 ;;
             x86 )

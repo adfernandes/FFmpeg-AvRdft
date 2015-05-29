@@ -1,10 +1,13 @@
 #!/bin/bash
 
+set -ex
+exec 2>&1
+
 LOG=build.log
 rm -rf "${LOG}.gz"
-
 (
     set -ex
+    exec 2>&1
 
     rm -rf destroot
 
@@ -21,6 +24,5 @@ rm -rf "${LOG}.gz"
         popd
     popd
 
-) 2>&1 1> "${LOG}"
+) 2>&1 | tee "${LOG}"
 gzip -9v  "${LOG}"
-

@@ -1,6 +1,6 @@
 .PHONY : default linux32 linux64 windows32 windows64 android verify clean
 
-ANDROID_NDK_HOME=$(HOME)/Development/android-ndk-r10d
+ANDROID_NDK_HOME=$(HOME)/Development/android-ndk-r10e
 ANDROID_NDK_API32=17
 ANDROID_NDK_API64=21
 

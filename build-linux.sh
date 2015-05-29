@@ -2,7 +2,7 @@
 
 set -e
 
-ARCHIVE="ffmpeg-2.6.2"
+ARCHIVE="ffmpeg-2.6.3"
 DESTROOT="${HOME}/Development/FFmpeg/destroot"
 
 for BITS in 32 64 ; do
